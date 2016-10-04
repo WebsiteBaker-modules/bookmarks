@@ -67,13 +67,13 @@ $fetch_content = $query_content->fetchRow();
 		<tr>
 			<td width="30%" valign="top"><?php echo $BMTEXT['COLUMS']; ?>:</td>
 			<td>
-			<?php $cellcount = stripslashes($fetch_content['cellcount']); ?>
-			<?php if ($cellcount == 0) { $cellcount = 1; } ?>
+			<? $cellcount = stripslashes($fetch_content['cellcount']); ?>
+			<? if ($cellcount == 0) { $cellcount = 1; } ?>
 			<select name="cellcount">
-				<option value ="1" <?php if ($cellcount == 1) { echo "selected"; } ?> >1</option>
-				<option value ="2" <?php if ($cellcount == 2) { echo "selected"; } ?> >2</option>
-				<option value ="3" <?php if ($cellcount == 3) { echo "selected"; } ?> >3</option>
-				<option value ="4" <?php if ($cellcount == 4) { echo "selected"; } ?> >4</option>
+				<option value ="1" <? if ($cellcount == 1) { echo "selected"; } ?> >1</option>
+				<option value ="2" <? if ($cellcount == 2) { echo "selected"; } ?> >2</option>
+				<option value ="3" <? if ($cellcount == 3) { echo "selected"; } ?> >3</option>
+				<option value ="4" <? if ($cellcount == 4) { echo "selected"; } ?> >4</option>
 			</select>
 		</tr>
 		<tr>

@@ -29,21 +29,21 @@ $database = new database(DB_URL);
 // Adding the new fields to the database table mod_bookmarks_settings and mod_bookmarks_groups
 echo "<BR><B>Adding new fields to database table mod_bookmarks_settings</B><BR>";
 if($database->query("ALTER TABLE `".TABLE_PREFIX."mod_bookmarks_settings` ADD `sort_grp_name` TINYINT(1) NOT NULL DEFAULT '0' AFTER `pic_loc`")) {
-	echo 'Database Field sort_grp_name added successfully<br />';
+        echo 'Database Field sort_grp_name added successfully<br />';
 }
-echo mysql_error().'<br />';
+
 
 if($database->query("ALTER TABLE `".TABLE_PREFIX."mod_bookmarks_settings` ADD `sort_nogrp_links` TINYINT(1) NOT NULL DEFAULT '0' AFTER `sort_grp_name`")) {
-	echo 'Database Field sort_nogrp_links added successfully<br />';
+        echo 'Database Field sort_nogrp_links added successfully<br />';
 }
-echo mysql_error().'<br />';
+
 
 echo "<BR><B>Adding new field to database table mod_bookmarks_groups</B><BR>";
 if($database->query("ALTER TABLE `".TABLE_PREFIX."mod_bookmarks_groups` ADD `sort_links_name` TINYINT(1) NOT NULL DEFAULT '0' AFTER `title`")) {
-	echo 'Database Field sort_links_name added successfully<br />';
+        echo 'Database Field sort_links_name added successfully<br />';
 }
-echo mysql_error().'<br />';
 
-	echo 'Your Bookmark module is updated!<br />';
+
+        echo 'Your Bookmark module is updated!<br />';
 
 ?>
